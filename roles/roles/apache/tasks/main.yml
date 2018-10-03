@@ -1,0 +1,10 @@
+---
+# tasks file for apache
+
+
+- name: instalação do apache centos
+  include: debian.yaml
+  main: ansible_os_family == "Debian"
+- name: intalação do apache centos
+  include: centos.yaml
+  main: ansible_os_family == "RedHat"

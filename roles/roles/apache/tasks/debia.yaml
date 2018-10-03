@@ -1,0 +1,13 @@
+
+
+
+- name: instalação do apache no  debian
+  package:
+    name: apache
+    state: present
+  copy:
+   src: /etc/httpd/conf.d/index.xml
+   dest: /var/www/html/
+  service:
+    name: httpd
+    state: started

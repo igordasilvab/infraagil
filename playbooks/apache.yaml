@@ -1,0 +1,5 @@
+
+- name: isntalando meu site devops
+  hosts: all
+  roles:
+   - web

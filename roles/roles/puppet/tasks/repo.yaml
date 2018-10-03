@@ -1,0 +1,14 @@
+
+- name: instalacao reositorio puppet debian
+  apt:
+   deb: https://apt.puppetlabs.com/puppet5-release-xenial.deb
+  when:
+   - ansible_distribution_release == "xenial"
+
+- name: instalacao repositorio puppet centos
+  yum:
+   name: https://yum.puppet.com/puppet5/puppet5-release-el-7.noarch.rpm
+  when:
+    -  ansible_distribution_major_version == "7"
+    -  ansible_distribution == "CentOS"
+  
